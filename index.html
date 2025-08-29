@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Dive into fun at Ajman Water Park, the biggest water park in Ajman! Buy tickets, plan your day with our AI assistant, and discover thrilling rides for the whole family.">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ajman Water Park - Your Ultimate UAE Adventure!</title>
+    
+        <link rel="icon" href="image/icon.png" type="image/x-icon">
+    
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+        <link rel="stylesheet" href="style.css">
+    </head>
+<body class="bg-gray-50">
+
+    <!-- Header -->
+    <header class="bg-white bg-opacity-90 backdrop-blur-sm shadow-md p-2 fixed w-full z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="flex-shrink-0">
+                <img src="image/customer-logo.png" alt="Ajman Water Park Logo" class="h-16 sm:h-20">
+            </a>
+            <nav class="hidden md:flex space-x-6 items-center">
+                <a href="#packages" class="hover:text-cyan-500 font-semibold text-gray-700">Packages</a>
+                <a href="#planner" class="hover:text-cyan-500 font-semibold text-gray-700">✨ AI Planner</a>
+                <a href="#team" class="hover:text-cyan-500 font-semibold text-gray-700">Our Team</a>
+                <a href="#info" class="hover:text-cyan-500 font-semibold text-gray-700">Park Info</a>
+                <a href="https://ticket.ajmanwaterpark.com/" class="bg-yellow-400 text-blue-900 font-bold px-5 py-2 rounded-full hover:bg-yellow-300 transition">Buy Tickets</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-3xl text-gray-700">
+                &#9776;
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden mt-2">
+            <a href="#packages" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Packages</a>
+            <a href="#planner" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">✨ AI Planner</a>
+            <a href="#team" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Our Team</a>
+            <a href="#info" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Park Info</a>
+            <a href="https://ticket.ajmanwaterpark.com/" class="block text-center mt-2 bg-yellow-400 text-blue-900 font-bold py-2 rounded-full hover:bg-yellow-300 transition">Buy Tickets</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center text-white text-center overflow-hidden">
+        <!-- Slideshow Container -->
+        <div class="slideshow-container">
+            <!-- Slide 1 -->
+            <div class="slide fade">
+                <img src="image/Pool-Family.jpeg" alt="Thrilling Water Slide">
+            </div>
+            <!-- Slide 2 -->
+            <div class="slide fade">
+                <img src="image/splash-pads-1-768x660.png" alt="Family Fun in the Pool">
+            </div>
+            <!-- Slide 3 -->
+            <div class="slide fade">
+                <img src="image/slide1.jpg" alt="Relaxing Lazy River">
+            </div>
+        </div>
+
+        <div class="hero-overlay absolute top-0 left-0 w-full h-full"></div>
+        
+        <div class="relative z-10 p-4">
+            <h1 class="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black mb-4 text-shadow uppercase tracking-wide">The Biggest Water Park In Ajman</h1>
+            <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-yellow-300 mb-6 text-shadow">Located in the Heart of Ajman Emirate</h2>
+            <p class="text-lg sm:text-xl md:text-2xl mb-8 text-shadow max-w-3xl mx-auto">Ajman Water Park is the UAE’s newest, coolest, and most thrilling waterpark! With attractions for all ages, it's the perfect family getaway!</p>
+            <a href="https://ticket.ajmanwaterpark.com/" class="bg-yellow-400 text-blue-900 font-bold px-5 py-2 rounded-full hover:bg-yellow-300 transition">Buy Your Tickets Now!</a>
+        </div>
+
+        <!-- Dots Navigation -->
+        <div class="dots-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </section>
+
+    <main class="container mx-auto mt-16 p-4">
+
+        <section id="features" class="my-20">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                <div class="bg-white p-6 rounded-lg card-shadow transform hover:-translate-y-2 transition-transform duration-300">
+                    <div class="text-5xl text-red-500 mb-4"><i class="fas fa-life-ring"></i></div>
+                    <h3 class="text-2xl font-bold text-blue-800 mb-2">Safety & Rules</h3>
+                    <p class="text-gray-600">Your safety is our priority. Our certified lifeguards and clear rules ensure a worry-free day of fun.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg card-shadow transform hover:-translate-y-2 transition-transform duration-300">
+                    <div class="text-5xl text-orange-500 mb-4"><i class="fas fa-utensils"></i></div>
+                    <h3 class="text-2xl font-bold text-blue-800 mb-2">Delicious Food</h3>
+                    <p class="text-gray-600">Refuel your fun! Our restaurants serve all types of food to satisfy your hunger after a splash.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg card-shadow transform hover:-translate-y-2 transition-transform duration-300">
+                    <div class="text-5xl text-blue-500 mb-4"><i class="fas fa-lock"></i></div>
+                    <h3 class="text-2xl font-bold text-blue-800 mb-2">Safety Lockers</h3>
+                    <p class="text-gray-600">Store your belongings securely in our safety lockers and enjoy the day with complete peace of mind.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg card-shadow transform hover:-translate-y-2 transition-transform duration-300">
+                    <div class="text-5xl text-cyan-500 mb-4"><i class="fas fa-water"></i></div>
+                    <h3 class="text-2xl font-bold text-blue-800 mb-2">Splash Pads</h3>
+                    <p class="text-gray-600">Endless fun for our youngest visitors! Have a splashing good time in one of our many interactive splash pads.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="packages" class="my-20 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-blue-900 mb-4">Featured Packages</h2>
+            <p class="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">We offer a range of water park packages tailored to your needs and budget. Enjoy fun-filled options for every occasion!</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+                <div class="package-card bg-white rounded-lg overflow-hidden card-shadow flex flex-col cursor-pointer">
+                    <img src="image/splash-pads-1-768x660.png" alt="All-Day Pass" class="w-full h-56 object-cover">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-2xl font-bold text-blue-800 mb-2 flex items-center justify-center">All-Day Splash Pass <span class="ai-icon" onclick="generateDescription(event, 'allday', 'All-Day Splash Pass', 'a full day ticket for adults who want to swim and enjoy all the rides.')">✨</span></h3>
+                        <p class="text-4xl font-black text-cyan-500 my-4">103.95 <span class="text-2xl font-semibold text-gray-500">AED</span></p>
+                        <ul class="text-gray-600 space-y-2 text-left mb-6 flex-grow">
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Full Day Access</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Includes Swim Access</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Perfect for thrill-seekers</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="package-card bg-blue-800 text-white p-8 rounded-lg card-shadow text-center flex flex-col z-10 cursor-pointer">
+                    <span class="bg-yellow-400 text-blue-900 font-bold text-sm py-1 px-3 rounded-full self-center mb-4">Most Popular</span>
+                    <h3 class="text-3xl font-bold flex items-center justify-center">Ultimate Family Splash <span class="ai-icon-light" onclick="generateDescription(event, 'family', 'Ultimate Family Splash', 'an all-inclusive 3-hour package for a family of four with meals and swim access for adults.')">✨</span></h3>
+                    <p class="text-5xl font-black text-yellow-300 my-4">315.00 <span class="text-2xl font-semibold">AED</span></p>
+                     <ul class="space-y-2 text-left mb-6 flex-grow">
+                            <li class="flex items-center"><i class="fas fa-check text-yellow-300 mr-2"></i> 2 Adults (With Swim)</li>
+                            <li class="flex items-center"><i class="fas fa-check text-yellow-300 mr-2"></i> 2 Kids</li>
+                            <li class="flex items-center"><i class="fas fa-check text-yellow-300 mr-2"></i> 2 Combo Meals Included</li>
+                             <li class="flex items-center"><i class="fas fa-check text-yellow-300 mr-2"></i> 3 Hours of Fun</li>
+                        </ul>
+                </div>
+                <div class="package-card bg-white rounded-lg overflow-hidden card-shadow flex flex-col cursor-pointer">
+                    <img src="image/slide-repeated.png" alt="Summer Camp" class="w-full h-56 object-cover">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-2xl font-bold text-blue-800 mb-2 flex items-center justify-center">Summer Camp Pass <span class="ai-icon" onclick="generateDescription(event, 'camp', 'Summer Camp Pass', 'a 5-day weekly pass for siblings to enjoy the summer camp.')">✨</span></h3>
+                         <p class="text-4xl font-black text-cyan-500 my-4">754.95 <span class="text-2xl font-semibold text-gray-500">AED</span></p>
+                        <ul class="text-gray-600 space-y-2 text-left mb-6 flex-grow">
+                           <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> 5 Days a Week Access</li>
+                           <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Perfect for Siblings</li>
+                           <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> The ultimate summer activity</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+             <div class="mt-12">
+                 <a href="https://ticket.ajmanwaterpark.com/" class="btn-secondary">View All Tickets & Packages</a>
+            </div>
+        </section>
+
+        <section id="planner" class="my-20 bg-gradient-to-br from-blue-50 to-indigo-100 p-8 md:p-16 rounded-2xl text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-blue-900 mb-4">✨ Plan Your Perfect Day</h2>
+            <p class="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">Don't know where to start? Describe your group and let our AI assistant create a personalized itinerary just for you!</p>
+            <div class="max-w-2xl mx-auto">
+                <textarea id="planner-input" class="w-full p-4 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-indigo-500" rows="4" placeholder="e.g., 'We are a family with two young kids (ages 5 and 7) and two grandparents who prefer relaxing.'"></textarea>
+                <button id="planner-button" class="btn-ai mt-6">Generate My Itinerary</button>
+            </div>
+            <div id="planner-output" class="mt-8 text-left max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-md hidden">
+                </div>
+        </section>
+
+        <section id="team" class="my-20 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-blue-900 mb-4">Meet Our Team</h2>
+            <p class="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">All our lifeguards are professionally trained with over 10 years of experience, ensuring your children are safe at all times.</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="team-card bg-white">
+                    <div class="team-image-container">
+                        <img src="image/Life Guard/LG2.png" alt="Liana Nieves" class="team-image">
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">Liana Nieves</h3>
+                        <p class="team-role">Management</p>
+                    </div>
+                </div>
+                <div class="team-card bg-white">
+                    <div class="team-image-container">
+                        <img src="image/Life Guard/LG1.png" alt="Teddie Swanson" class="team-image">
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">Teddie Swanson</h3>
+                        <p class="team-role">Chief Executive Officer</p>
+                    </div>
+                </div>
+                <div class="team-card bg-white">
+                    <div class="team-image-container">
+                        <img src="image/Life Guard/LG3.png" alt="Laurel Golden" class="team-image">
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">Laurel Golden</h3>
+                        <p class="team-role">Sales Director</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Our Skills Section -->
+            <div id="skills" class="mt-16 max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+                    <div class="skill">
+                        <div class="skill-info">
+                            <span class="skill-name">Communication</span>
+                            <span class="skill-percent">92%</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar green" data-width="92%"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-info">
+                            <span class="skill-name">Customer Service</span>
+                            <span class="skill-percent">86%</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar blue" data-width="86%"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-info">
+                            <span class="skill-name">Experiences</span>
+                            <span class="skill-percent">88%</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar green" data-width="88%"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-info">
+                            <span class="skill-name">Certified Lifeguard</span>
+                            <span class="skill-percent">88%</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar blue" data-width="88%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="info" class="my-20">
+            <div class="text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-blue-900 mb-12">Visitor Essentials</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="bg-white p-8 rounded-lg card-shadow">
+                    <div class="text-5xl text-cyan-500 mb-4">🕒</div>
+                    <h3 class="text-2xl font-bold text-blue-800 mb-2">Park Hours</h3>
+                    <p class="text-gray-600 font-semibold">Monday - Friday:</p>
+                    <p class="text-gray-600 mb-2">11:00 AM - 4:00 PM</p>
+                    <p class="text-gray-600 font-semibold">Saturday - Sunday & Holidays:</p>
+                    <p class="text-gray-600">9:00 AM - 5:00 PM</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg card-shadow">
+                    <div class="text-5xl text-cyan-500 mb-4">📍</div>
+                    <h3 class="text-2xl font-bold text-blue-800 mb-2">Location</h3>
+                    <p class="text-gray-600">Ajman Clock Tower<br>Al Rashidiya 1, Ajman</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg card-shadow">
+                    <div class="text-5xl text-cyan-500 mb-4">❓</div>
+                    <h3 class="text-2xl font-bold text-blue-800 mb-2">FAQ</h3>
+                    <p class="text-gray-600">Got questions? Visit our FAQ page for answers to common queries.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact" class="bg-blue-900 text-white pt-12 pb-8">
+        <div class="container mx-auto text-center">
+            <h3 class="text-3xl font-bold mb-4">Get News, Updates, & Special Offers!</h3>
+            <p class="mb-8">Join our email list for the latest events and discounts.</p>
+            <div class="flex justify-center space-x-6 mb-8 text-3xl">
+                <a href="#" class="hover:text-yellow-300"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="hover:text-yellow-300"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-yellow-300"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="hover:text-yellow-300"><i class="fab fa-youtube"></i></a>
+            </div>
+            <div class="my-4 text-blue-200">
+                <p>info@gladiators.ae | +971527128173</p>
+            </div>
+            <p class="text-blue-200 text-sm">&copy; 2025 Ajman Water Park. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- AI Chatbot -->
+    <div id="chatbot-container" class="fixed bottom-5 left-5 z-50">
+        <button id="chatbot-toggle" class="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center shadow-lg text-3xl">
+            <i class="fas fa-comment-dots"></i>
+        </button>
+        <div id="chatbot-window" class="hidden absolute bottom-20 left-0 w-80 sm:w-96 bg-white rounded-lg shadow-2xl">
+            <div class="bg-blue-600 text-white p-4 rounded-t-lg flex justify-between items-center">
+                <h3 class="font-bold text-lg">Chat with Captain Splash ✨</h3>
+                <button id="chatbot-close" class="text-2xl">&times;</button>
+            </div>
+            <div id="chatbot-messages" class="p-4 h-80 overflow-y-auto">
+                <!-- Messages will appear here -->
+                <div class="chat-bubble bot">Hello! I'm Captain Splash. How can I help you make a splash today?</div>
+            </div>
+            <div class="p-4 border-t flex">
+                <input type="text" id="chatbot-input" class="flex-grow border rounded-l-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Ask a question...">
+                <button id="chatbot-send" class="bg-blue-600 text-white px-4 rounded-r-lg font-bold">Send</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="whatsapp-chat-container">
+        <div class="whatsapp-window">
+            <div class="whatsapp-header">
+                <div class="whatsapp-profile">
+                    <img src="image/icon.png" alt="Agent Avatar">
+                </div>
+                <div class="whatsapp-agent-info">
+                    <div class="agent-name">Ajman Sales Support</div>
+                    <div class="agent-status">Online</div>
+                </div>
+                <button class="whatsapp-close-btn">&times;</button>
+            </div>
+            <div class="whatsapp-body">
+                <div class="whatsapp-message agent-message">
+                    <p>Hi there 👋</p>
+                    <p>How can we help you today?</p>
+                </div>
+            </div>
+            <div class="whatsapp-footer">
+                <textarea id="whatsapp-input" placeholder="Type a message..."></textarea>
+                <a class="whatsapp-send-btn" href="#" target="_blank">
+                    <i class="fas fa-paper-plane"></i>
+                </a>
+            </div>
+        </div>
+        <button class="whatsapp-launcher">
+            <i class="fab fa-whatsapp"></i>
+        </button>
+    </div>
+
+
+    <!-- Modal for AI Descriptions -->
+    <div id="ai-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50 hidden">
+        <div class="bg-white rounded-lg p-8 max-w-md w-full text-center relative">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-2xl text-gray-500 hover:text-gray-800">&times;</button>
+            <h3 id="modal-title" class="text-2xl font-bold text-blue-800 mb-4"></h3>
+            <div id="modal-content" class="text-gray-600"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
